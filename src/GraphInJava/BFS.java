@@ -1,6 +1,5 @@
 package GraphInJava;
 
-import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
