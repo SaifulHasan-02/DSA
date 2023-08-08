@@ -89,22 +89,16 @@ public class BFS {
     public static ArrayList<Integer> bfs2(ArrayList<ArrayList<Integer>> list,int V){
         ArrayList<Integer> ans = new ArrayList<>();
         boolean[] visited = new boolean[V];
-
-        for (int i = 0; i < V ; i++) {
-            if(!visited[i]){
-
-                Queue<Integer> q = new LinkedList<>();
-                q.offer(i);
-                visited[i] = true;
-                while (!q.isEmpty()) {
-                    Integer temp = q.poll();
-                    ans.add(temp);
-                    for (Integer e : list.get(temp)) {
-                        if (!visited[e]) {
-                            visited[e] = true;
-                            q.offer(e);
-                        }
-                    }
+        Queue<Integer> q = new LinkList<>();
+        q.offer(0);
+        visited[0] = true;
+        while (!q.isEmpty()) {
+            Integer temp = q.poll();
+            ans.add(temp);
+            for (Integer e : list.get(temp)) {
+                if (!visited[e]) {
+                    visited[e] = true;
+                    q.offer(e);
                 }
             }
         }
